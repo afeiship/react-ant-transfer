@@ -12,12 +12,14 @@ export default class extends Component {
   static propTypes = {
     className: PropTypes.string,
     onChange: PropTypes.func,
+    value: PropTypes.array,
     template: PropTypes.func,
   };
 
   static defaultProps = {
     onChange: noop,
     template: noop,
+    value:[]
   };
   /*===properties end===*/
 
@@ -26,11 +28,12 @@ export default class extends Component {
   };
 
   render() {
-    const { className, items, template, onChange, ...props } = this.props;
+    const { className, items, template, value, onChange, ...props } = this.props;
     return (
       <Transfer
         dataSource={items}
         listStyle={{ width: 300, height: 300, }}
+        targetKeys={value}
         className={classNames('react-ant-transfer', className)}
         onChange={this._onChange}
         render={template}
