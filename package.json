@@ -81,6 +81,10 @@
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
   },
+  "peerDependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
   "dependencies": {
     "antd": "^3.6.1",
     "classnames": "^2.2.5",
@@ -89,8 +93,6 @@
     "next-return-event": "github:afeiship/next-return-event",
     "noop": "github:afeiship/noop",
     "object-assign": "^4.1.1",
-    "prop-types": "^15.5.10",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "prop-types": "^15.5.10"
   }
 }
